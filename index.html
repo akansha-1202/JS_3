@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Iteration Statements</title>
+</head>
+<body>
+    <h1>Iteration Statements</h1>
+    <hr>
+    <br>
+    <span>QUESTION 1.</span>&nbsp;
+    <span class="span1">Find the number of digits</span>
+    <P>Take a number from the user and print the count of digits in that number.</P>
+    <span>SOLUTION.</span>
+    <pre>const Find_Digits = (N) => 
+      {
+        let count=0;
+        while(N!==0){
+          count++;
+          N=Math.floor(N/10);
+        }
+        return count;
+      };</pre>
+
+    <span>Input:</span>&nbsp;1234 <br>
+    <span>Output:</span>&nbsp; 4
+    <br><br>
+    <hr>
+    <br>
+
+    <span>QUESTION 2.</span>&nbsp;
+    <span class="span1">Find the Fives.</span>
+    <P>Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.</P>
+    <span>SOLUTION.</span>
+    <pre>const Find_Five = (N) => 
+      {
+         let count=0;
+        while (N!==0) {
+          if(N%10==5){
+          count++;
+        }
+        N=Math.floor(N/10);
+        }
+        return count;
+      };</pre>
+      <span>Input:</span>&nbsp;345654<br>
+      <span>Output:</span>&nbsp;2<br>
+      <br><br>
+      <hr>
+      <br>
+
+      <span>QUESTION 3.</span>&nbsp;
+    <span class="span1">Find Sum</span>
+    <P>You are given an integer N, and your task is to find the sum of all the even integers starting from  1 upto N (N inclusive).</P>
+    <span>SOLUTION.</span>
+    <pre>const findSum = (n) => {
+      let i; sum=0;
+      for(i=1;i<=n;i++)
+      {
+        if(i%2===0)
+        {
+          sum+=i;
+        }
+      }
+      return sum;
+   };</pre>
+      <span>Input:</span>&nbsp; 6<br>
+      <span>Output:</span>&nbsp; 12
+      <br><br>
+      <hr>
+      <br>
+
+      <span>QUESTION 4.</span>&nbsp;
+    <span class="span1" >Find the sum of the digits of a given number</span>
+    <p>Write a program that takes a number from the user and get the sum of the digits present in the number.</p>
+    <span>SOLUTION.</span>
+    <pre>const Number_Sum = (N) => 
+      {  
+       let sum = 0, remainder;
+        while(N>0)
+        {
+          remainder = N % 10;
+          N = Math.floor(N/10);
+           sum+=remainder;
+         }
+         return sum;
+      };</pre>
+      <span>Input:</span>&nbsp;1234<br>
+      <span>Output:</span>&nbsp;10
+      <br><br>
+      <hr>
+      <br>
+
+      <span>QUESTION 5.</span>&nbsp;
+    <span  class="span1">Print the Odds</span>
+    <p>Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</p>
+    <span>SOLUTION.</span>
+    <pre>const Print_Odd = (N) => 
+      {
+        let i=0;
+        console.log(2);
+         for(i=3;i<=N;i=i+2)
+         {
+           console.log(i);
+         }
+       //SECOND METHOD 
+      /* console.log(2);
+         for(i=3;i<=N;i++)
+         {
+           if(i%2==1)
+           {
+           console.log(i + " ODD");
+           }
+          else
+           {
+             console.log(i + " EVEN");
+            }
+          }
+      */
+      };</pre>
+      <span>Input:</span>&nbsp; 10<br>
+      <span>Output:</span>&nbsp; 
+      <pre class="pre1">
+      2<br>
+      3<br>
+      5<br>
+      7<br>
+      9 </pre>     
+      <br><br><br><br><br><br><br><br><br><br><br>
+      <hr>
+      <br>
+
+      <span>QUESTION 6.</span>&nbsp;
+      <span class="span1">Print the Pattern</span>
+      <p>Write a program which ask user for no of lines and print a pattern using an asterik .</p>
+      <span>SOLUTION.</span>
+      <pre>const Print_pattern = (N) => 
+        {
+        for(row=1;row<=N;row++){
+          let s="";//empty variable
+          for(col=1;col<=row;col++){
+            s=s+"*";
+          }
+          console.log(s);
+        }
+        };
+     </pre>
+        <span>Input:</span>&nbsp;5<br>
+        <span>Output:</span>&nbsp; 
+        <pre class="pre1">
+          *
+          **
+          ***
+          ****
+          *****</pre>
+        <br><br><br><br><br><br><br>
+        <hr>
+        <br>
+
+        <span>QUESTION 7.</span>&nbsp;
+      <span class="span1">Check whether a Number is a prime or not</span>
+      <p>Write a program which takes  a number from user and check whether number is prime number or not a prime number.</p>
+      <span>SOLUTION.</span>
+      <pre>
+        const Prime_Check = (N) => 
+        {
+          let i; count=0;
+          for(i=1;i<=N;i++){
+            if(N%i===0){
+              count++;
+            }
+          }
+          if(count==2){ // 2 is used bcz there are only 2 factors of prime number
+            return "YES";
+          }
+          else{
+            return "NO";
+          }
+        }; 
+        </pre>
+        <span>Input 1:</span>&nbsp; 7
+        <br>
+        <span>Output 1:</span>&nbsp; YES
+        <br>
+        <span>Input 2:</span>&nbsp; 4
+        <br>
+        <span>Output 2:</span>&nbsp;NO
+        <br><br>
+        <hr>
+        <br>
+
+        <span>QUESTION 8.</span>&nbsp;
+      <span class="span1">Print Numbers</span>
+      <p>You are given an integer N, and your task is to print all the integers starting from  1 till N(N inclusive).</p>
+    <span>SOLUTION.</span>
+      <pre>const printNumbers = (n) => {
+        let result=0;
+      for(let i=1;i<=n;i++){
+          result=result+i+" ";
+          }   
+        console.log(result);
+      };</pre>
+        <span>Input:</span>&nbsp; 4
+        <br>
+        <span>Output:</span>&nbsp; &nbsp; 1 2 3 4 
+        <br><br>
+        <hr>
+        <br>
+        
+        <span>QUESTION 9.</span>&nbsp;
+      <span class="span1">Print the Table</span>
+      <p>Write a program which takes a number from user and print the table.</p>
+      <span>SOLUTION.</span>
+      <pre>const Print_Table = (N) => 
+        {
+          for(let i=1;i<=10;i++){
+            console.log(N + " * " + i + " = " + N*i);
+          }
+        };</pre>
+        <span>Input:</span>&nbsp; 3
+        <br>
+        <span>Output:</span>&nbsp; 
+       <pre class="pre1">
+        3∗1=3
+        
+        3∗2=6
+        
+        3∗3=9
+        
+        3∗4=12
+        
+        3∗5=15
+        
+        3∗6=18
+        
+        3∗7=21
+        
+        3∗8=24
+        
+        3∗9=27
+        
+        3∗10=30
+        
+        </pre>
+        
+        <br><br><br> <br><br><br>
+        <br><br><br> <br><br><br><br><br><br> <br><br><br><br><br>
+        <hr>
+        <br>
+</body>
+</html>
